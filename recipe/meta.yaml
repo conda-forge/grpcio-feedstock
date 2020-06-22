@@ -1,4 +1,4 @@
-{% set version = "1.27.2" %}
+{% set version = "1.29.0" %}
 
 package:
   name: grpcio
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/g/grpcio/grpcio-{{ version }}.tar.gz
-  sha256: 5ae532b93cf9ce5a2a549b74a2c35e3b690b171ece9358519b3039c7b84c887e
+  sha256: a97ea91e31863c9a3879684b5fb3c6ab4b17c5431787548fc9f52b9483ea9c25
   patches:
     - 0001-Monkey-patch-distutils.ccompiler.spawn-to-elide-std-.patch
     - 0002-windows-ssl-lib-names.patch
@@ -52,7 +52,7 @@ test:
 about:
   home: https://grpc.io
   license: Apache-2.0
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
+  license_file: {{ environ["RECIPE_DIR"] }}/LICENSE
   license_family: APACHE
   summary: HTTP/2-based RPC framework
 
